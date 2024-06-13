@@ -63,6 +63,9 @@ function readFile(dataString) {
     5  
   -9
   62
+  -8
+  8
+  -8
   -1
   -9
   -9
