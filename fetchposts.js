@@ -1,4 +1,4 @@
-const good = document.getElementById('container')
+const container = document.getElementById('container')
 
 function createContainer(heading, paragraph, comment) {
     const parent = document.createElement('div');
