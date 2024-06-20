@@ -74,21 +74,21 @@ function myFetch(url) {
   
       xhr.onload = function() {
         if (xhr.status >= 200 && xhr.status < 300) {
-          resolve(xhr.responseText); // Resolve with response text
+          resolve(xhr.responseText); 
         } else {
-          reject(new Error(`Request failed with status: ${xhr.status}`)); // Reject with error
+          reject(new Error(`Request failed with status: ${xhr.status}`)); 
         }
       };
   
       xhr.onerror = function() {
-        reject(new Error("Network error")); // Reject with network error message
+        reject(new Error("Network error"));
       };
   
       xhr.send();
     });
   }
   
-  // Usage example
+  
   myFetch('https://my-random-api.com/data')
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
