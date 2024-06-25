@@ -11,6 +11,7 @@ async function fetchData() {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts")
     const data = await response.json();
 
+    console.log(data)
     for(let i = 0; i<=9; i++) {
             extractData(data[i]["title"])
     }
