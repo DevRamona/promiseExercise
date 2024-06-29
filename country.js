@@ -15,11 +15,11 @@ async function getCountry(countryName) {
 
  async function getWeather() {
     const result = await getCountry("France");
-    const fetchWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true`);
+    const fetchWeather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
     const data2 = await fetchWeather.json();
     const lati = result[0].latlng[0]
     const longi = result[0].latlng[1]
-    console.log(longi)
+    // console.log()
 
 
 }

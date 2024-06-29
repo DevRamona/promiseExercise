@@ -7,7 +7,7 @@
 
 async function fetUserTodos() {
   try {
-    const users = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const users = await fetch(``);
     const response = await users.json();
 
     const todos = await fetch(`https://jsonplaceholder.typicode.com/todos`);

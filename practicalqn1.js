@@ -5,31 +5,54 @@
 //    stating Delay is not sufficient
 
 
-
-function createAlarm(person, delay) {
+function createAlarm(name, delay) {
     return new Promise((resolve, reject) => {
+        
         setTimeout(() => {
-            console.log(`Wake up ${person}`)
+            resolve(`Wake up ${name}`)
+            
         }, delay *1000)
-    
-        if(delay < 2) {
-            console.log("Delay is not sufficient")
-        }
 
+        if(delay <2) {
+            reject("Delay is not sufficient")
+        }
     })
     
 
 }
 
 
-// createAlarm('John', 4).then((message) => {
-//     console.log(message) // output "Wake up John" after 4 seconds
-// }).catch((error) => {
-//     console.error(error)
-// })
 
- createAlarm('John', 1).then((message) => {
-     console.log(message)
- }).catch((error) => {
-     console.error(error) // output "Delay is not sufficient"
- })
+
+
+
+
+
+
+
+// function createAlarm(person, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`Wake up ${person}`)
+//         }, delay *1000)
+    
+//         if(delay < 2) {
+//             console.log("Delay is not sufficient")
+//         }
+
+//     })
+    
+
+// }
+
+//  createAlarm('John', 4).then((message) => {
+//      console.log(message) // output "Wake up John" after 4 seconds
+//  }).catch((error) => {
+//       console.error(error)
+//  })
+
+createAlarm('John', 1).then((message) => {
+      console.log(message)
+  }).catch((error) => {
+      console.error(error) // output "Delay is not sufficient"
+  })
